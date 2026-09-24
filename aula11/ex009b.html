@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem de Estrangeiro</title>
+</head>
+<body>
+    <h1>Descubra se voce é estrangeiro</h1>
+    Digite o seu Pais: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="consultar()">
+    <div id="res"></div>
+
+    <script>
+        function consultar() {
+            var pais = window.document.getElementById('pais')
+            var res = window.document.getElementById('res')
+            var paisstring = String(pais.value)
+
+            if (paisstring == 'Brasil') {
+            res.innerHTML = `<p>Voce está no ${paisstring} voce é brasileiro </p>`
+            } else {
+                res.innerHTML = `<p>Voce está no ${paisstring} voce é estrangeiro</p>`
+            }
+
+
+        }
+
+    </script>
+
+
+</body>
+</html>
